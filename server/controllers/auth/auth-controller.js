@@ -35,7 +35,7 @@ const registerUser = async (req, res) => {
   }
 };
 
-//login
+
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
@@ -87,7 +87,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-//logout
+
 
 const logoutUser = (req, res) => {
   res.clearCookie("token").json({
@@ -96,7 +96,7 @@ const logoutUser = (req, res) => {
   });
 };
 
-//auth middleware
+
 const authMiddleware = async (req, res, next) => {
   const token = req.cookies.token;
   if (!token)
